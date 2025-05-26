@@ -1,2 +1,9 @@
-<h1>Bookmarks#new</h1>
-<p>Find me in app/views/bookmarks/new.html.erb</p>
+<div class="container border shadow mt-4">
+  <h1 class="text d-flex justify-content-center">Add a Bookmark</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie, collection: @movies, prompt: 'Choose a movie' %>
+    <%= f.input :comment %>
+    <%= f.submit class:"btn btn-success"%>
+  <% end %>
+  <%= link_to "Back to list", list_path(@list), class:"btn btn-warning my-2"%>
+</div>

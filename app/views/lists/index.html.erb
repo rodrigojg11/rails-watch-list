@@ -1,6 +1,11 @@
-<h1>My Lists</h1>
-<%= link_to 'Create a new list', new_list_path, class: "btn btn-primary" %>
-
-<% @lists.each do |list| %>
-  <%= list.name %>
-<% end %>
+<div class="container border shadow m-4">
+  <h1 class="text d-flex justify-content-center">Genders</h1>
+    <ul>
+        <% @lists.each do |list| %>
+      <li>
+        <%= link_to list.name, list_path(list) %>
+      </li>
+      <% end %>
+    </ul>
+  <%= link_to "Create a new gender", new_list_path, class: "btn btn-primary my-2" %>
+</div>

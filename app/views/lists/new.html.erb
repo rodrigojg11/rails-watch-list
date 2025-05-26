@@ -1,8 +1,10 @@
-<h1>Create a new list</h1>
+<div class="container border shadow mt-4">
+  <h1 class="text d-flex justify-content-center">Create a new list</h1>
 
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.input :submit, 'Create List', class: 'btn btn-success' %>
-<% end %>
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.submit class: 'btn btn-success' %>
+  <% end %>
 
-<%= link_to 'Back to all lists', lists_path, class: 'btn btn-warning' %>
+  <%= link_to 'Back to all lists', lists_path, class: 'btn btn-warning mt-2 my-2' %>
+</div>
